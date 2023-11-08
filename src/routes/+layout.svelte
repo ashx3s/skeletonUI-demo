@@ -1,40 +1,45 @@
 <script>
 	import '../app.postcss';
-	import { AppShell, AppBar, Avatar } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, Avatar, LightSwitch } from '@skeletonlabs/skeleton';
 </script>
 
 <AppShell>
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
-		<AppBar>
+		<AppBar
+			slotDefault="place-self-center"
+			slotTrail="place-content-end"
+			background="bg-secondary-50-900-token"
+		>
 			<svelte:fragment slot="lead">
 				<strong class="text-xl uppercase">Skeleton</strong>
 			</svelte:fragment>
+			<a
+				class="btn btn-sm variant-ghost-surface"
+				href="https://discord.gg/EXqV7W8MtY"
+				target="_blank"
+				rel="noreferrer"
+			>
+				Discord
+			</a>
+			<a
+				class="btn btn-sm variant-ghost-surface"
+				href="https://twitter.com/SkeletonUI"
+				target="_blank"
+				rel="noreferrer"
+			>
+				Twitter
+			</a>
+			<a
+				class="btn btn-sm variant-ghost-surface"
+				href="https://github.com/skeletonlabs/skeleton"
+				target="_blank"
+				rel="noreferrer"
+			>
+				GitHub
+			</a>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://discord.gg/EXqV7W8MtY"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Discord
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://twitter.com/SkeletonUI"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Twitter
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
-					target="_blank"
-					rel="noreferrer"
-				>
-					GitHub
-				</a>
+				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
